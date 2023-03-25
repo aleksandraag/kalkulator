@@ -123,4 +123,7 @@ button:hover {
 
 .history-item {
   margin: 8px 0px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(29, 27, 27, 0.233);
+  padding-bottom: 5px;
 }/*# sourceMappingURL=style.css.map */
