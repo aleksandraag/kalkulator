@@ -28,13 +28,78 @@ function displayNumbers() {
   currentNumber.innerHTML += this.textContent;
 }
 
-function operate() {}
+function operate() {
+  if (currentNumber.innerHTML === "" && this.textContent === "-") {
+    currentNumber.innerHTML = "-";
+    return;
+  } else if (currentNumber.innerHTML === "") {
+    reutrn;
+  }
 
-function showResult() {}
+  if (mathSign.innerHTML !== "0") {
+    showResult();
+  }
 
-function clearScreen() {}
+  previousNumber.innerHTML = currentNumber.innerHTML;
+  mathSign.innerHTML = this.textContent;
+  currentNumber.innerHTML = "";
+}
 
-function clearHistory() {}
+function showResult() {
+  if (previousNumber.innerHTML === "" || currentNumber.innerHTML === "") return;
+
+  let a = Number(currentNumber.innerHTML);
+  let b = Number(previousNumber.innerHTML);
+  let operator = mathSign.innerHTML;
+
+  switch (operator) {
+    case "+":
+      result = a + b;
+      break;
+
+    case "-":
+      result = b - a;
+      break;
+
+    case "x":
+      result = a * b;
+      break;
+
+    case ":":
+      result = b / a;
+      break;
+
+    case "2^":
+      result = b ** a;
+      break;
+  }
+  addToHistory();
+  historyBtn.classList.add("active");
+  currentNumber.innerHTML = result;
+  previousNumber.innerHTML = "";
+  mathSign.innerHTML = "";
+}
+
+function addToHistory() {
+  const newHistoryItem = document.createElement("li");
+  newHistoryItem.innerHTML = `${currentNumber.innerHTML} ${mathSign.innerHTML} ${previousNumber.innerHTML} = ${result}`;
+  newHistoryItem.classList.add("history-item");
+  calculatorHistory.appendChild(newHistoryItem);
+}
+
+function clearHistory() {
+  calculatorHistory.textContent = "";
+  if (calculatorHistory.textContent === "") {
+    historyBtn.classList.remove("active");
+  }
+}
+
+function clearScreen() {
+  result = "";
+  currentNumber.innerHTML = "";
+  previousNumber.innerHTML = "";
+  mathSign.innerHTML = "";
+}
 
 // Nasłuchiwanie buttonów
 
