@@ -20,16 +20,13 @@ body {
 }
 
 .calculator {
-  height: 60vh;
   min-width: 370px;
   max-width: 370px;
 }
 
 .display {
   width: 100%;
-  min-height: 20%;
-  max-height: -moz-min-content;
-  max-height: min-content;
+  height: 80px;
   background-color: rgba(29, 27, 27, 0.151);
   box-shadow: 36px 15px 96px -10px rgba(0, 0, 0, 0.82);
   -webkit-box-shadow: 36px 15px 96px -10px rgba(0, 0, 0, 0.82);
@@ -45,12 +42,12 @@ body {
 }
 
 .currentNumber {
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .previousNumber {
   color: rgb(182, 182, 182);
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .mathSign {
@@ -58,7 +55,7 @@ body {
 }
 
 .panel {
-  height: 80%;
+  height: 300px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -85,7 +82,7 @@ button:hover {
 }
 
 .calculator-history {
-  height: 60vh;
+  height: 380px;
   margin: 20px;
   width: 150px;
   background-color: rgba(20, 27, 27, 0.151);

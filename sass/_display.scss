@@ -1,7 +1,8 @@
 .display {
   width: 100%;
-  min-height: 20%;
-  max-height: min-content;
+  height: 80px;
+  // min-height: 20%;
+  // max-height: min-content;
   background-color: rgba(29, 27, 27, 0.151);
   box-shadow: 36px 15px 96px -10px rgba(0, 0, 0, 0.82);
   -webkit-box-shadow: 36px 15px 96px -10px rgba(0, 0, 0, 0.82);
@@ -17,12 +18,12 @@
 }
 
 .currentNumber {
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .previousNumber {
     color: rgb(182,182,182);
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .mathSign {
